@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css')}}">
+    <link href="https://fonts.cdnfonts.com/css/the-amsterdam" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <title>Business Model</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/logo/header-logo-round.png')}}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#" id="logo-name">Kheti.Ai</a>
+        </div> 
+        <nav>
+            <ul>
+                {% for key, value in navbarItems.items() %}
+                <li><a href="{{value.url}}">{{key}}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+ <!--Business section-->
+
+ <section class="about-section">
+    <div class="about-container">
+        <div class="about-box">
+            <img src="{{url_for('static', filename='img/Business/feasibility2.jpg')}}" alt="Team Meeting">
+            <div class="text-content">
+                <h2>Feasibility</h2>
+                <p>A website for plant health detection is feasible due to the rising demand for digital agricultural solutions. Using machine learning and image recognition, the site can accurately identify plant diseases and offer preventive measures and treatments. The growing interest in sustainable farming practices supports a broad market reach, making this platform valuable for farmers, gardeners, and agricultural professionals.</p>
+            </div>
+        </div>
+        <div class="about-box">
+            <img src="{{url_for('static', filename='img/Business/innovation1.jpg')}}" alt="Hands Together">
+            <div class="text-content">
+                <h2>Innovation</h2>
+                <p>Integrate the ML model with IoT devices such as drones, soil sensors, and cameras that can continuously monitor crops and automatically send data to the model for analysis. Automation of data collection and analysis can significantly reduce manual labor and improve the accuracy of disease detection by capturing data from multiple angles and under different conditions.</p>
+            </div>
+        </div>
+        <div class="about-box">
+            <img src="{{url_for('static', filename='img/Business/business.jpg')}}" alt="People Working Together">
+            <div class="text-content">
+                <h2>Business Model</h2>
+                <p>The plant health detection website combines social impact with revenue generation. It provides free basic diagnostics and educational resources to support home gardeners and small farmers, promoting sustainability and food security. Premium features offer advanced diagnostics for a fee, while partnerships with agricultural organizations fund research and support underserved communities. A portion of profits is dedicated to global agricultural education and sustainable farming initiatives, ensuring accessibility and positive societal impact.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+ <!--footer section-->
+ <footer>
+    <div class="footer-container">
+        <div class="footer-section logo">
+            <img src="{{url_for('static', filename='img/logo/3.png')}}" alt="Logo" id="footer-logo">
+            
+        </div>
+        <div class="footer-section organization">
+            <h4>Organization</h4>
+            <ul>
+                {% for key,value  in footerOrganizationItems.items() %}
+                <li><a href={{value.url}}>{{key}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-section resources">
+            <h4>Resources</h4>
+            <ul>
+                {% for key,value  in footerResourcesItems.items() %}
+                <li><a href={{value.url}}>{{key}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-section legal">
+            <h4>Legal</h4>
+            <ul>
+                {% for key,value  in footerLegalItems.items() %}
+                <li><a href={{value.url}}>{{key}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h4>Contact us</h4>
+            <ul>
+                {% for key,value in footerContactUsItems.items() %}
+                <li><a href={{value.url}}>{{key}}</a></li>
+                {% endfor %}
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="{{url_for('static', filename='img/icon/Black/facebook-icon.png')}}" alt="Facebook"></a>
+                <a href="https://www.instagram.com/accounts/login/"><img src="{{url_for('static', filename='img/icon/Black/instagram-icon.png')}}" alt="Instagram"></a>
+                <a href="https://web.telegram.org/a/"><img src="{{url_for('static', filename='img/icon/Black/telegram-icon.png')}}" alt="Telegram"></a>
+                <a href="https://x.com/login?mx=2"><img src="{{url_for('static', filename='img/icon/Black/twitter-icon.png')}}" alt="Twitter"></a>
+                <a href="https://web.whatsapp.com/"><img src="{{url_for('static', filename='img/icon/Black/whatsapp-icon.png')}}" alt="Whatsapp"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2014-2024 Kheti.Ai™</p>
+    </div>
+</footer>
+
+</body>
+</html>
